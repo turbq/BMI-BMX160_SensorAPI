@@ -1490,7 +1490,7 @@ int8_t bmi160_init(struct bmi160_dev *dev)
             rslt = bmi160_get_regs(BMI160_CHIP_ID_ADDR, &dev->chip_id, 1, dev);
         }
 
-        if ((rslt == BMI160_OK) && ((dev->chip_id != BMI160_CHIP_ID)||(dev->chip_id != BMX160_CHIP_ID)))
+        if ((rslt == BMI160_OK) && ((dev->chip_id == BMI160_CHIP_ID)||(dev->chip_id == BMX160_CHIP_ID)))
         {
             dev->any_sig_sel = BMI160_BOTH_ANY_SIG_MOTION_DISABLED;
 
